@@ -4,6 +4,7 @@
     <script>
       var hash = window.location.hash.substring(1);
       //alert(hash);
+      console.log(hash);
       $Lightning.use("c:helloOutApp", function() {
         $Lightning.createComponent("c:helloOuterWorld", {}, "lightning", function(component) {
           console.log("Lightning component has been created");
