@@ -3,21 +3,25 @@
   
   </head>
  <body style="background-color:#50C878	">
-   <h1>Green Area is external site v2</h1>
+   <h1>Green Area is external site v3</h1>
    <br/>
    <h2><a href="https://varuntrailhead-dev-ed.lightning.force.com/lightning/o/Case/list?filterName=00B3l000009EnmyEAC" target="_blank">Show Cases In Salesforce ( Deep Link ) </a>
    </h2><br/>
    <button style="background-color:yellow" onclick="getSessionFromSalesforce()">Show Inline Cases View</button>
     <script src="https://varuntrailhead-dev-ed.my.site.com/sports/lightning/lightning.out.js"></script>
     <script>
-      var hash="Varun";
-       $Lightning.use("c:helloOutApp", function() {
-       $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
+           function createComponent(hash){
+            if (hash !=="") {
+                $Lightning.use("c:helloOutApp", function() {
+                  $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
                     console.log("Lightning component has been created");
-       });
-       },
-       "https://varuntrailhead-dev-ed.my.site.com/sports"
-       );
+                  });
+                },
+                "https://varuntrailhead-dev-ed.my.site.com/sports",hash
+                );
+           }
+      } 
+      createComponent("Varun");
      </script> 
 </body>
 </html>
