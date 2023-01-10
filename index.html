@@ -1,11 +1,7 @@
 <html>
   <head>
    <script>
-     window.addEventListener("message", (event) => {
-       alert(event.origin);
-    if (event.origin !== "http://example.org:8080")
-      return;
-    }, false);
+
 
     </script>
   </head>
@@ -36,6 +32,13 @@
     </script>
 
     <div id="lightning" style="background-color:#F8F8F8	"></div>
+    Listening to child window...
+   <script>
+        window.addEventListener("message", receiveMessage, false);
+        function receiveMessage(event) {
+          console.log("Received message: " + event.data);
+        }
+   </script>
 
 </body>
 </html>
