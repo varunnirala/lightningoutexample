@@ -10,7 +10,7 @@
       document.write(hash)
       if (hash !=="") {
         $Lightning.use("c:helloOutApp", function() {
-          $Lightning.createComponent("c:helloOuterWorld", {}, "lightning", function(component) {
+          $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
             console.log("Lightning component has been created");
           });
         },
