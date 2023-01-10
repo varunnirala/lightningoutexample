@@ -18,22 +18,6 @@
         );
         
         
-        
-        // Store the current URL in a variable
-        var currentUrl = window.location.href;
-
-        // Find the position of the # symbol in the URL
-        var hashIndex = currentUrl.indexOf('#');
-
-        // If the URL contains a # symbol
-        if (hashIndex !== -1) {
-          // Remove the portion of the URL after the # symbol
-          var newUrl = currentUrl.substring(0, hashIndex);
-          // Update the URL
-          window.location.href = newUrl;
-        }
-
-        
       } else {
         //window.open("https://varuntrailhead-dev-ed.my.site.com/sports/helloWorld?startFlow=yes");
         let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
