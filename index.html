@@ -7,22 +7,20 @@
     <script src="https://varuntrailhead-dev-ed.my.site.com/sports/lightning/lightning.out.js"></script>
     <script>
       var hash = window.location.hash.substring(1);
-      //document.write(hash)
-      if (hash !=="") {
-        $Lightning.use("c:helloOutApp", function() {
-          $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
-            console.log("Lightning component has been created");
-          });
-        },
-        "https://varuntrailhead-dev-ed.my.site.com/sports",hash
-        );
-        
-        
-      } else {
+      function createComponent(){
+            if (hash !=="") {
+                $Lightning.use("c:helloOutApp", function() {
+                  $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
+                    console.log("Lightning component has been created");
+                  });
+                },
+                "https://varuntrailhead-dev-ed.my.site.com/sports",hash
+                );
+           }
+      } 
+       if (hash=="") {
         //window.open("https://varuntrailhead-dev-ed.my.site.com/sports/helloWorld?startFlow=yes");
-        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=0,height=0,left=-1000,top=-1000`;
-
+        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0,left=-1000,top=-1000`;
         open('https://varuntrailhead-dev-ed.my.site.com/sports/helloWorld?startFlow=yes', 'test', params);
       }
     </script>
