@@ -32,8 +32,7 @@
     </script>
 
     <div id="lightning" style="background-color:#F8F8F8	"></div>
-    Listening to child window...
-   <script>
+    <script>
         window.addEventListener("message", receiveMessage, false);
         function receiveMessage(event) {
           console.log("Received message: " + event.data);
