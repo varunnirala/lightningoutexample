@@ -11,6 +11,8 @@
   </head>
  <body style="background-color:#50C878	">
    <h1>Green Area is external site, which hosts the salesforce component</h1>
+   <br/>
+   <button onclick="getSessionFromSalesforce()">Show Me Cases</button>
     <script src="https://varuntrailhead-dev-ed.my.site.com/sports/lightning/lightning.out.js"></script>
     <script>
       var hash = window.location.hash.substring(1);
@@ -25,11 +27,12 @@
                 );
            }
       } 
-       if (hash=="") {
-        //window.open("https://varuntrailhead-dev-ed.my.site.com/sports/helloWorld?startFlow=yes");
-        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0,left=-1000,top=-1000`;
+      
+      function getSessionFromSalesforce(){
+              let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0,left=-1000,top=-1000`;
         open('https://varuntrailhead-dev-ed.my.site.com/sports/helloWorld?startFlow=yes', 'test', params);
       }
+      
     </script>
 
     <div id="lightning" style="background-color:#F8F8F8	"></div>
