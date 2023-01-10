@@ -10,8 +10,9 @@
    <button style="background-color:yellow" onclick="getSessionFromSalesforce()">Show Inline Cases View</button>
     <script src="https://varuntrailhead-dev-ed.my.site.com/sports/lightning/lightning.out.js"></script>
     <script>
+      var hash="Varun";
        $Lightning.use("c:helloOutApp", function() {
-       $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
+       $Lightning.createComponent("c:helloOuterWorld", {"sId":""}, "lightning", function(component) {
                     console.log("Lightning component has been created");
        });
        },
