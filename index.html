@@ -7,7 +7,7 @@
     <script src="https://varuntrailhead-dev-ed.my.site.com/sports/lightning/lightning.out.js"></script>
     <script>
       var hash = window.location.hash.substring(1);
-      document.write(hash)
+      //document.write(hash)
       if (hash !=="") {
         $Lightning.use("c:helloOutApp", function() {
           $Lightning.createComponent("c:helloOuterWorld", {"sId":hash}, "lightning", function(component) {
